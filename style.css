@@ -1,6 +1,8 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box
+    
     
 }
 /* font */
@@ -11,28 +13,28 @@ body{
 
 /* top section */
 .influ-title{
- position: absolute;
-left: 120px;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 36px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    margin-left: 120px;
+    margin-top: 87px;
+    }
+.top-page{
+    margin-left: 120px;
+    margin-top: 87px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    }
 
-}
-.container{
-    top: 110px;
-    left: 120px;
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.container h1{
+
+.top-page h1{
     font-size: 52px;
 line-height: 70px;
 }
-.container p{
+.top-page p{
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 16px;
 }
 .influ-head{
     margin-right: 133px;
@@ -49,11 +51,9 @@ line-height: 70px;
 
 /* our-collection */
 .top-collection{
-position: absolute;
+margin: 100px 196px 0px 197px;
 width: 1047px;
 height: 1662px;
-left: 196px;
-top: 935px;
 }
 .collection-title{
     text-align: center;
@@ -110,35 +110,32 @@ span{
 
 /* see-more */
 .see-more{
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 50px;
     color:#E02C6DDE;
     text-decoration: none;
     font-size: 16px;
     line-height: 24px;
-    left: 950px;
-    top: 15px;
-    
 }
 
 /* footer */
 
 
 .footer{
-   position: absolute;
-   width: 100%;
-   height: 200px;
-   top: 2600px;
    background: #000000;
    color: #FFFFFF;
    display: grid;
     align-items: center;
     justify-items: center;
     text-align: center;
+    padding: 50px;
+   
     
 }
-.social-media-icon{
-    display: flex;
-    flex-direction: row;  
+.footer h2{
+    font-size: 24px;
 }
 .footer p{
     font-weight: bold;
@@ -147,6 +144,32 @@ span{
     color: #D9DBE1;
 }
 .social-media-icon{
-display: flex;
-justify-content: space-evenly;
+        display: flex;
+        flex-direction: row; 
+        justify-content:space-evenly ; 
+    }
+/* media query for mobile*/
+
+@media only screen and (max-width:688px){
+    .container{
+        width: 100%;
+    }
+   .top-page, .collections{
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    
+}
+
+/* media query for tab */
+
+@media only screen and (min-width:688px) and (max-width:992px){
+    .container{ 
+        width: 100%;
+    }
+    .top-page, .collections{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    
 }
